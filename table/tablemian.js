@@ -89,6 +89,23 @@ const spongebobCharacters = [
   },
 ];
 
+const select = document.querySelector('#species');
+
+function getSpecies() {
+  const array = [];
+
+  for (let i = 0; i < spongebobCharacters.length; i++) {
+    if (!array.includes(spongebobCharacters[i].species)) {
+      array.push(spongebobCharacters[i].species);
+      const option = document.createElement('option');
+      option.innerText = spongebobCharacters[i].species;
+      select.appendChild(option);
+    }
+  }
+}
+
+getSpecies();
+
 const table = document.querySelector('#charactersTBody');
 
 spongebobCharacters.map((character) => {
@@ -99,7 +116,15 @@ spongebobCharacters.map((character) => {
     const cellText = document.createTextNode(`${character[data]}`);
     cell.appendChild(cellText);
     row.appendChild(cell);
-  };
+  }
 
   table.appendChild(row);
 });
+
+select.addEventListener('change', () => {
+
+});
+
+
+const boxes  = document.querySelectorAll('.box')
+

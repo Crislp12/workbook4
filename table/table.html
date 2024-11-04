@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
   </head>
   <body>
-
-    <form> </form>
-    
-    <div id="table" style= "width: 60%; margin: auto;"> 
+    <form style="width: 80%;">
+      <select name="species" id="species" style="padding: 0% ;">
+        <option value="">Choose a category</option>
+      </select>
+    </form>
+    <div id="table" style="width: 60%; margin: auto">
       <table class="table">
-        <caption>SpongeBob Characters</caption>
+        <caption>
+          SpongeBob Characters
+        </caption>
         <thead>
           <tr>
             <th>Name</th>
@@ -21,13 +25,19 @@
             <th>Favorite Activity</th>
           </tr>
         </thead>
-
-        <tbody id="charactersTBody">
-        </tbody>
+        <tbody id="charactersTBody"></tbody>
       </table>
+    </div>
+
+    <div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
 
     </div>
-    
+
     <script src="tablemian.js"></script>
   </body>
 </html>
